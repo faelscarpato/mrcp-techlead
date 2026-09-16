@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-term-bg: #050505;
+  --color-term-text: #e0e0e0;
+  --color-term-accent: #00ffcc;
+  --color-term-error: #ff3366;
+  --color-term-dim: #555555;
+  --color-term-border: #1a1a1a;
+}
+
+:root {
+  --background: var(--color-term-bg);
+  --foreground: var(--color-term-text);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Terminal handles its own scroll */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
